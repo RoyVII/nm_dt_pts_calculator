@@ -200,3 +200,5 @@ for method in range(4):
 print_dt_pts_arrays_func(dicts_methods, model_name)
 
 os.system("make FOLDER="+model_name+" MODEL="+model_name.lower()+" clean")
+
+os.system("sed -i 's/\/\/nm->set_pts_burst\ =/nm->set_pts_burst\ =/g' model_library/neuron/"+model_name+"/nm_"+model_name.lower()+".c")
